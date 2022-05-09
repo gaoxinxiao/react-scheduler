@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#content span {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+#content .span1{
+    border: 1px solid red;
+    color: red;
+}
+#content .span2{
+    border: 1px solid blue;
+    color: blue;
+}
+#content .span3{
+    border: 1px solid green;
+    color: green;
+}
+#content .span4{
+    border: 1px solid #000;
+    color: #000;
+}
+#content .span5{
+    border: 1px solid purple;
+    color: purple;
+}
+
+
+
+#root button {
+    margin: 10px;
+}

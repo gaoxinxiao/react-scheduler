@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<span id="cont">0</span>
+<button id="btn">开始</button>
+
+<body>
+    <script>
+
+        let len = 100000, ret = 0, cancelFrame = null, cancelInterVal = null;
+
+        const action = () => {
+            if (len <= 0) {
+                cancelFrame && cancelAnimationFrame(cancelFrame)
+            }
+
+            cancelFrame = requestAnimationFrame(() => {
+                len--
+                ret += len
+                cont.innerHTML = ret
+                action()
+            })
+        }
+
+
+        btn.onclick = function () {
+            // while (len--) {
+            //     ret += len
+            //     cont.innerHTML = ret
+            // }
+            action()
+
+            // if (len <= 0) {
+            //     cancelInterVal && clearInterval(cancelInterVal)
+            // }
+
+            // cancelInterVal = setInterval(() => {
+            //     len--
+            //     ret += len
+            //     cont.innerHTML = ret
+            // }, 100)
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
